@@ -1,0 +1,2 @@
+# challengesJS
+Some JavaScript challenges
