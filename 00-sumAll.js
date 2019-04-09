@@ -7,10 +7,10 @@ function sumNum (num) {
         total += count;
         count += 1;
     }
-    console.log(total);
+    return total;
 }
 
 console.log('First test, number 10: ');
-console.log(`Total is ${sumNum(10)}`);
-console.log('First test, number 20: ');
-console.log(`Total is ${sumNum(12)}`);
+console.log(`Total is: ${sumNum(10)}`);
+console.log('Second test, number 12: ');
+console.log(`Total is: ${sumNum(12)}`);
