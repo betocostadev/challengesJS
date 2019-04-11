@@ -28,5 +28,8 @@ Files based on:
 ✅ *Get Area and Perimeter*: /hacker-rank/01-get-area-perim.js
 ✅ *Function to factorial*: /hacker-rank/02-func-to-fac.js
 ✅ *Let and Const - Find the area and perimeter of a radius*: /hacker-rank/03-let-const-pi.js
+✅ *JS DAY 2: If Else*: /hacker-rank/04-if-else.js
+✅ *JS DAY 2: Loops*: /hacker-rank/05-loops.js
+
 
 **LICENSE:** **[MIT](https://tldrlegal.com/license/mit-license)**
