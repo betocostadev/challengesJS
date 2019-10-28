@@ -59,6 +59,14 @@ const countWithWhile = (arr, searchEl) => {
 }
 console.log(`How many "8" inside it?`, countWithWhile(arrayLoop, 8))
 
+console.log(`
+Counting using Reduce:`)
+
+const countWithReduce = (arr, searchEl) => {
+  return arr.reduce((acc, cur) => (cur === searchEl ? acc + 1 : acc), 0)
+}
+console.log(`How many "8" inside it?`, countWithReduce(arrayLoop, 8))
+
 // Find and count elements in the array using recursion
 console.log(`
 Find and count elements in the array using recursion
@@ -73,69 +81,21 @@ const countdown = (num) => {
 
 countdown(5)
 
-let count = 0
-let index = 0
+// console.log(recursiveCount(arrayLoop, 19, 0, 0))
 
-const recursiveCount = (arr, el, ind, calls) => {
-  calls++
-  console.log(`Calls: `, calls)
-  console.log('El \ ind', el, ind)
-  console.log(`Element found in: `, arr.indexOf(el, ind))
-  // Force only the first element before incrementing the index. To avoid not passing by the el 0.
-  if (ind === 0 && arr.includes(el, ind)) {
-    ++count
-    ++ind
-    return recursiveCount(arr, el, ind, calls)
-  }
-  // Keep searching from index 1
-  ind++
-  if (calls > 1 && !arr.includes(el, ind)) {
-    return `Search complete, count is ${count}`
-  }
-  if (!arr.includes(el, ind)) {
-    return `Element not present in the array`
-  } else {
-    if (calls >= arr.length) {
-      return `Calls ended! Calls: ${calls}. Count: ${count}`
+console.log(`The array to find the items: `, arrayLoop)
+const recursiveCount = (arr, searchEl) => {
+  // Copy the array to avoid mutation the original array.
+  let arrayCopy = arr.filter(element => element)
+  // The recursive function
+  const countElements = (copy, item) => {
+    if (copy.length === 1) {
+      return copy[0] === item ? true : false
+    } else {
+      return (copy.shift() === item ? true : false) + countElements(copy, item)
     }
-    ++count
-    console.log(`Count: ${count}`)
-    ind = arr.indexOf(el, ind)
-    return recursiveCount(arr, el, ind, calls)
   }
+  return countElements(arrayCopy, searchEl)
 }
 
-console.log(recursiveCount(arrayLoop, 19, 0, 0))
-/* let periquito = 0
-const countAgain = (num) => {
-  if (num === 0) return
-  periquito++
-  console.log('Periquito', periquito)
-  return countAgain(num - 1, periquito)
-}
-
-countAgain(4)
-
-
-const arrayOne = [1, 2, 3, 3, 4, 5, 1, 7, 8, 4, 4, 2]
-
-let count = 0
-let calls = 0
-const findInArr = (arr, element, index) => {
-  calls++
-  if (calls > arr.length) {
-    return (`Ended calls`, calls)
-  }
-  if (!arr.includes(element)) {
-    return `Element not found!`
-  }
-  if (index > 0) {
-    count++
-    return console.log('Grelos!', count, findInArr(arr, element, arr.indexOf(element) + 1))
-  }
-  count++
-  return findInArr(arr, element, arr.indexOf(element) + 1)
-}
-
-// `Found in position ${arr.indexOf(element)}`
-console.log(findInArr(arrayOne, 1, 0)) */
+console.log(`Recursive count total: `, recursiveCount(arrayLoop, 8))
