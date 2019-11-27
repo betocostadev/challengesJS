@@ -46,3 +46,13 @@ function factorialElo (num) {
 }
 console.log(`Using the Eloquent JS version:`);
 console.log(factorialElo(5));
+
+// Sum and reduce 1
+function factorialNew (n) {
+  if (n <=1 ) {
+    return 1;
+  }
+  return n* factorialNew(n-1);
+}
+console.log('Using another simple and effective version: ')
+console.log(factorialNew(5));
