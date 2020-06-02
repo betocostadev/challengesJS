@@ -16,14 +16,14 @@ Sample output = D;
 */
 
 // Julia score:
-let score = 4;
-function getGrade(score) {
+let score = 4
+function getGrade(sore) {
     let grade;
     // Write your code here
     if (score >= 31) {
-        grade = "Invalid";
+        grade = "Invalid"
     } else if (score > 24 && score <= 30) {
-        grade = "A";
+        grade = "A"
     } else if (score > 19 && score <= 25){
         grade = "B"
     } else if (score > 14 && score <= 20){
@@ -33,9 +33,9 @@ function getGrade(score) {
     } else if (score > 4 && score <= 10){
         grade = "E"
     } else {
-        grade = "F";
+        grade = "F"
     }
-    return grade;
+    return grade
 }
 
-console.log(getGrade(score));
+console.log(getGrade(score))

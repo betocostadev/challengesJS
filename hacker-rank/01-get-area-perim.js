@@ -9,11 +9,11 @@ Area = 3 x 4.5, then:
 2 * (3 + 4.5) = 15 (perimeter) */
 
 function getAreaPer(length, width) {
-    const area = length * width;
-    const perimeter = 2 * (length + width);
-    const result = `The area is ${area}, and the perimeter is ${perimeter}`;
-    return result;
+    const area = length * width
+    const perimeter = 2 * (length + width)
+    const result = `The area is ${area}, and the perimeter is ${perimeter}`
+    return result
 }
 
-console.log(getAreaPer(2, 4));
-console.log(getAreaPer(3, 4.5));
+console.log(getAreaPer(2, 4))
+console.log(getAreaPer(3, 4.5))
