@@ -1,5 +1,6 @@
 # challengesJS
-## This Repo only contains some JavaScript challenges
+
+This Repo is based only on some JavaScript challenges
 
 ***
 
